@@ -29,25 +29,27 @@ app = FastAPI(
 # CORS
 # =========================================================
 
-app.add_middleware (
+# =========================================================
+# CORS
+# =========================================================
+
+app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "http://127.0.0.1:5173",
-    "http://127.0.0.1:5174",
-    "http://172.26.92.246:5173",
-    "http://172.26.92.246:5174",
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:5174",
+        "http://172.26.92.246:5173",
+        "http://172.26.92.246:5174",
 
-],
-
+        # Production frontend
+        "https://rakshak-frontend-272n.vercel.app",
+    ],
     allow_credentials=True,
-
     allow_methods=["*"],
-
     allow_headers=["*"],
 )
-
 
 # =========================================================
 # DATABASE STARTUP
