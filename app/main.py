@@ -45,6 +45,8 @@ app.add_middleware(
 
         # Production frontend
         "https://rakshak-frontend-272n.vercel.app",
+        "https://rakshak-frontend-272n-git-main-innovators2.vercel.app",
+        "https://rakshak-frontend-272n-otcgojbws-innovators2.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
